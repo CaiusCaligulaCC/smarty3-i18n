@@ -1,4 +1,4 @@
-#!/usr/bin/env php
+#!/usr/bin/php
 <?php
 /**
  * tsmarty2c.php - rips gettext strings from smarty template
