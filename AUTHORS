@@ -1,0 +1,16 @@
+smarty3-i18n AUTHORS
+=======================
+
+This is the alphabetical list of all people that have
+contributed to the smarty3-i18n, beeing code, translations,
+documentation and additional help.
+
+* Olivier BONHOMME <obonhomme@nerim.net>
+  patch for FSF new address and coorect shebang in tsmarty2c.php
+  
+* Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+  Patch for empty locale string management in block.t.php
+  Original man page for tsmarty2c.php
+
+  
+  

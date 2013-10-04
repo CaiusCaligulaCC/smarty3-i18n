@@ -1,13 +1,12 @@
-$Id: README,v 1.4 2005/07/27 18:14:59 sagi Exp $
+ ----------------------------------------------------------------------
+| smarty3-i18n - Gettext support for Smarty                            |
+|                                                                      |
+| Original Author: Sagi Bashari <sagi@boom.org.il>                     |
+| Actual Author: FusionDirectory project <contact@fusiondirectory.org> |
+| URL: https://forge.fusiondirectory.org/projects/smarty3-i18n         |
+ -----------------------------------------------------------------------
 
- ------------------------------------------------
-| smarty-gettext - Gettext support for Smarty    |
-|                                                |
-| Author: Sagi Bashari <sagi@boom.org.il>        |
-| URL:    http://smarty-gettext.sourceforge.net/ |
- ------------------------------------------------
-
-smarty-gettext provides gettext support for Smarty, 
+smarty3-i18n provides gettext support for Smarty, 
 the popular PHP templating engine (http://smarty.php.net/).
 
 This README assumes that you already know what is gettext and how to
@@ -135,17 +134,5 @@ or use 'php tsmarty2c.php' to run the script.
  -----------
 
 Copyright (c) 2004-2005 Sagi Bashari
+Copyright (C) 2013 FusionDirectory project
 
-This library is free software; you can redistribute it and/or
-modify it under the terms of the GNU Lesser General Public
-License as published by the Free Software Foundation; either
-version 2.1 of the License, or (at your option) any later version.
-
-This library is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-Lesser General Public License for more details.
-
-You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA

@@ -28,11 +28,13 @@
  *
  * If a parameter is a directory, the template files within will be parsed.
  *
- * @package	smarty-gettext
- * @version	$Id: tsmarty2c.php,v 1.3 2005/07/27 17:59:39 sagi Exp $
- * @link	http://smarty-gettext.sf.net/
+ * @package	smarty3-i18n
+ * @version	1.4 2013/10/04
+ * @link	https://forge.fusiondirectory.org/projects/smarty3-i18n
  * @author	Sagi Bashari <sagi@boom.org.il>
+ * @author  FusionDirectory project <contact@fusiondirectory.org>
  * @copyright 2004-2005 Sagi Bashari
+ * @copyright 2013 FusionDirectory Project
  */
 
 // smarty open tag

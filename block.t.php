@@ -20,11 +20,13 @@
  *
  * Installation: simply copy this file to the smarty plugins directory.
  *
- * @package	smarty-gettext
- * @version	$Id: block.t.php,v 1.1 2005/07/27 17:58:56 sagi Exp $
- * @link	http://smarty-gettext.sourceforge.net/
+ * @package	smarty3-i18n
+ * @version	1.2 2013/10/04
+ * @link	https://forge.fusiondirectory.org/projects/smarty3-i18n
  * @author	Sagi Bashari <sagi@boom.org.il>
+ * @author  FusionDirectory project <contact@fusiondirectory.org>
  * @copyright 2004-2005 Sagi Bashari
+ * @copyright 2013 FusionDirectory Project
  */
  
 /**
