@@ -1,3 +1,14 @@
+Smarty3-i18n Changelog
+======================
+
+* Smarty3-i18n 1.0
+
+[Fix] Bugs #2759: import the debian patches and manpages
+[Fix] Bugs #2760: correcting fsf address in the code
+[Fix] Bugs #2761: fix the shebang for tsmarty2c.php
+[Fix] Bugs #2762: converting the manpage to a .pod for easier modification
+[Fix] Bugs #2763: add copyright for various authors to the code and readme files
+
 2005-07-27  Sagi Bashari  <sagi@boom.org.il>
 	* README:
 	- Redone
