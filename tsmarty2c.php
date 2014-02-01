@@ -19,8 +19,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA *
  * ------------------------------------------------------------------------------ *
  *
- * This command line script rips gettext strings from smarty file, 
- * and prints them to stdout in C format, that can later be used with the 
+ * This command line script rips gettext strings from smarty file,
+ * and prints them to stdout in C format, that can later be used with the
  * standard gettext tools.
  *
  * Usage:
@@ -58,6 +58,18 @@ function fs($str)
 	return $str;
 }
 
+// "fix" string - strip slashes, escape and condense whitespaces to one space.
+// Useful when formatting the text inside the gettext-tags like normal
+// html-code
+function fsc($str)
+{
+	$str = stripslashes($str);
+	$str = str_replace('"', '\"', $str);
+	$str = preg_replace('!\s+!', ' ', trim($str));
+
+	return $str;
+}
+
 // rips gettext strings from $file and prints them in C format
 function do_file($file)
 {
@@ -74,15 +86,19 @@ function do_file($file)
 			$content,
 			$matches
 	);
-	
+
 	for ($i=0; $i < count($matches[0]); $i++) {
 		// TODO: add line number
 		echo "/* $file */\n"; // credit: Mike van Lammeren 2005-02-14
-		
+
+		//Check what function to use to fix the string
+		$fs_method = (strstr($matches[2][$i], 'condense=yes') !== false) ?
+			'fsc' : 'fs';
+
 		if (preg_match('/plural\s*=\s*["\']?\s*(.[^\"\']*)\s*["\']?/', $matches[2][$i], $match)) {
-			echo 'ngettext("'.fs($matches[3][$i]).'","'.fs($match[1]).'",x);'."\n";
+			echo 'ngettext("'.$fs_method($matches[3][$i]).'","'.$fs_method($match[1]).'",x);'."\n";
 		} else {
-			echo 'gettext("'.fs($matches[3][$i]).'");'."\n";
+			echo 'gettext("'.$fs_method($matches[3][$i]).'");'."\n";
 		}
 
 		echo "\n";
@@ -105,7 +121,7 @@ function do_dir($dir)
 			do_dir($entry);
 		} else { // if file, parse only if extension is matched
 			$pi = pathinfo($entry);
-			
+
 			if (isset($pi['extension']) && in_array($pi['extension'], $GLOBALS['extensions'])) {
 				do_file($entry);
 			}
